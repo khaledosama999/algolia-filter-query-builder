@@ -1,10 +1,20 @@
 {
-  "name": "<package-name>",
+  "name": "algolia-search-builder",
   "version": "0.0.0",
-  "description": "description",
+  "description": "A query parser for algolia filters",
   "repository": {
-    "url": ""
+    "url": "https://github.com/khaledosama999/algolia-filter-query-builder"
   },
+  "keywords": [
+    "algolia",
+    "search",
+    "query",
+    "filter",
+    "parser",
+    "builder",
+    "ORM",
+    "ODM"
+  ],
   "main": "./build/index.js",
   "module": "./build/index.js",
   "files": [
@@ -31,7 +41,7 @@
       "name": "Khaled osama <khaledosama999>",
       "email": "khaledosama52@gmail.com",
       "url": "https://github.com/khaledosama999"
-    },
+    }
   ],
   "license": "ISC",
   "devDependencies": {
@@ -64,5 +74,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.168",
+    "lodash": "^4.17.21"
   }
 }
