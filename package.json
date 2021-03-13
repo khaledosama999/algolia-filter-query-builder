@@ -17,9 +17,7 @@
   ],
   "main": "./build/index.js",
   "module": "./build/index.js",
-  "files": [
-    "build"
-  ],
+  "files": [ "build" ],
   "types": "./build/index.d.ts",
   "source": "./src/index.ts",
   "scripts": {
@@ -74,9 +72,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "@types/lodash": "^4.14.168",
-    "lodash": "^4.17.21"
   }
 }

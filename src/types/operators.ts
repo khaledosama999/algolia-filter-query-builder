@@ -23,4 +23,4 @@ export type FieldsObjectQuery = {[key:string]: FieldOperations | Not | String | 
 
 // Conjunction and disjunction
 export type Or = {'or': FieldsObjectQuery [] };
-export type And = {'and': FieldsObjectQuery [] | Or [] };
+export type And = {'and': (FieldsObjectQuery | Or) [] };
