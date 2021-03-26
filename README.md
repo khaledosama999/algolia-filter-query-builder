@@ -12,12 +12,12 @@ npm i algolia-search-builder
   - [Operators](#operators)
     - [Numeric](#numeric)
       * [eq](#eq)
-      * [ne](#ne)
       * [gt](#gt)
       * [gte](#gte)
       * [lt](#lt)
       * [lte](#lte)
       * [between](#between)
+      * [in](#in)
     - [Logical](#logical)
       * [not](#not)
       * [or](#or)
@@ -53,11 +53,6 @@ const results = algoliaIndex.search("str",{
     ```json
     { x : { eq : 3 } }
     ```
-   - #### ne 
-    Checks if a field doesn't equals to the given value
-    ```json
-    { x : { ne : 3 } }
-    ```
    - #### gt  
     Checks if a field is greater than the given value
     ```json
@@ -82,6 +77,11 @@ const results = algoliaIndex.search("str",{
     Checks if a field is between the two given values (inclusive)
     ```json
     { x : { between : [1,2] } }
+    ```
+   - #### in 
+    Checks if a field is in the array of given values (can contain strings or number)
+    ```json
+    { x : { in : [1,2,3] } }
     ```
 - ### Logical 
    - #### not
