@@ -1,6 +1,6 @@
 {
   "name": "algolia-search-builder",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A query parser for algolia filters",
   "repository": {
     "url": "https://github.com/khaledosama999/algolia-filter-query-builder"
@@ -17,7 +17,9 @@
   ],
   "main": "./build/index.js",
   "module": "./build/index.js",
-  "files": [ "build" ],
+  "files": [
+    "build"
+  ],
   "types": "./build/index.d.ts",
   "source": "./src/index.ts",
   "scripts": {
