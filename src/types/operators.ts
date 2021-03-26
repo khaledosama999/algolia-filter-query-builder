@@ -13,8 +13,8 @@ export type NumericOperation = Equal | NotEqual | GreaterThan | GreaterThanOrEqu
 
 // Range operations
 export type Between = {'between':[Number, Number]}
-
-export type FieldOperations = NumericOperation | Between;
+export type In = {'in':(number | string)[]}
+export type FieldOperations = NumericOperation | Between | In;
 
 // Inversion
 export type Not = {'not':FieldOperations}
