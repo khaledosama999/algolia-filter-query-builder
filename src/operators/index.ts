@@ -1,6 +1,8 @@
 export { default as AndOperator } from './and';
 export { default as BetweenOperator } from './between';
-export { default as EqualOperator } from './equal';
+export { default as NumericEqual } from './numeric-equal';
+export { default as NonNumericEqual } from './no-numeric-equal';
+export { default as EqualFactory } from './equal-factory';
 export { default as GreaterThanOrEqualOperator } from './greater-than-or-equal';
 export { default as GreaterThanOperator } from './greater-than';
 export { default as LessThanOrEqualOperator } from './less-than-or-equal';

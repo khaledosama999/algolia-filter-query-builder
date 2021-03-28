@@ -1,10 +1,10 @@
 /* eslint-disable constructor-super */
 /* eslint-disable class-methods-use-this */
-import { Operator } from './abstract';
+import { LogicalOperator, Operator } from './abstract';
 
 class NotOperator extends Operator {
   constructor(private values: Operator []) {
-    super();
+    super('not');
   }
 
   public exec() {
@@ -17,7 +17,9 @@ class NotOperator extends Operator {
   }
 
   public validate() {
-    return true;
+    const hasLogicalOperator = this.values.some((operator) => operator instanceof LogicalOperator);
+
+    if (hasLogicalOperator) throw new Error(`The ${this.operator} can not contain logical operators (and, or)`);
   }
 }
 

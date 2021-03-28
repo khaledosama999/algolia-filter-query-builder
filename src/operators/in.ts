@@ -5,7 +5,7 @@ import AndOperator from './and';
 
 class InOperator extends Operator {
   constructor(private value: Operator[]) {
-    super();
+    super('in');
   }
 
   public exec() {
