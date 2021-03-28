@@ -2,12 +2,12 @@
 import Operator from './base';
 
 abstract class NumericOperator extends Operator {
-  constructor(protected fieldName: string, protected value: number) {
-    super();
+  constructor(protected fieldName: string, protected value: number, operator:string) {
+    super(operator);
   }
 
   public validate() {
-    return true;
+    if (typeof this.value !== 'number') { throw new Error(`The ${this.operator} accepts numeric values only`); }
   }
 }
 

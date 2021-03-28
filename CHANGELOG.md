@@ -1,3 +1,18 @@
+### 1.1.0 (2021-03-28)
+
+##### Documentation Changes
+
+* **readme:**  update the README file to reflect the new ne operator and the query validation ([5a012410](https://github.com/khaledosama999/algolia-filter-query-builder/commit/5a0124106c281ef654b53fd9845b3b7c2cd96f32))
+* **types:**  update the Types JSDocs so they are easy to use ([0f35a9a7](https://github.com/khaledosama999/algolia-filter-query-builder/commit/0f35a9a777502b67aef25967821ad1322a745654))
+
+##### New Features
+
+* **operators:**  make each operator a standlone class to facilitate query parsing and validation ([64df1237](https://github.com/khaledosama999/algolia-filter-query-builder/commit/64df12373369688791a36e168cd2928c4ea5fdaa))
+
+##### Tests
+
+* **operator and query parser:**  add tests for the new operator classes and the query parser ([550c8d89](https://github.com/khaledosama999/algolia-filter-query-builder/commit/550c8d89114d1bac879499be151559599ed26896))
+
 ## 1.0.0 (2021-03-26)
 
 ##### Documentation Changes

@@ -12,6 +12,7 @@ npm i algolia-search-builder
   - [Operators](#operators)
     - [Numeric](#numeric)
       * [eq](#eq)
+      * [ne](#ne)
       * [gt](#gt)
       * [gte](#gte)
       * [lt](#lt)
@@ -51,61 +52,67 @@ const results = algoliaIndex.search("str",{
     
      Checks if a field equals to the given value
     ```json
-    { x : { eq : 3 } }
+    { x: { eq: 3 } }
+    ```
+   - #### ne 
+    
+     Checks if a field is not equal to the given value
+    ```json
+    { x: { ne: 3 } }
     ```
    - #### gt  
     Checks if a field is greater than the given value
     ```json
-    { x : { gt : 3 } }
+    { x: { gt: 3 } }
     ```
    - #### gte
     Checks if a field is greater than or equal the given value
     ```json
-    { x : { gte: 3 } }
+    { x: { gt: 3 } }
     ```
    - #### lt  
     Checks if a field is less than the given value
     ```json
-    { x : { lt : 3 } }
+    { x: { lt: 3 } }
     ```
    - #### lte
     Checks if a field is less than or equal the given value
     ```json
-    { x : { lte: 3 } }
+    { x: { lt: 3 } }
     ```
    - #### between
     Checks if a field is between the two given values (inclusive)
     ```json
-    { x : { between : [1,2] } }
+    { x: { between: [1,2] } }
     ```
-   - #### in 
+****   - #### in 
     Checks if a field is in the array of given values (can contain strings or number)
     ```json
-    { x : { in : [1,2,3] } }
+    { x: { in: [1,2,3] } }
     ```
 - ### Logical 
    - #### not
     Negates the given query 
    ```json
-   { x : { not : { between :[ 1 , 2] } } }
+   { x: { not: { between:[ 1 , 2] } } }
    ``` 
    - #### or
    returns results that satisfy at least one of the given conditions
    ```json
-   { or :
+   { or:
     [
-       { x : { eq :1 } }, 
-       { y : { eq :2 } }, 
+       { x: { eq:1 } }, 
+       { y: { eq:2 } }, 
     ]
    }
    ```  
    - #### and
    returns results that satisfy at all of the given conditions
    ```json
-   { and :
+   { and:
     [
-       { x : { eq :1 } }, 
-       { y : { eq :2 } }, 
+       { x: { eq:1 } }, 
+       { y: { eq:2 } }, 
     ]
    }
    ```
@@ -134,7 +141,7 @@ const results = algoliaIndex.search("str",{
      
 ### General Notes
 
-- The validity of the filter query is **your** response the builder only (for now) transforms it to a string. To find out algolia filters constraint check this [link](http://algolia.com/doc/api-reference/api-parameters/filters).
+- The query builder validates the query after parsing and before returning the query string the limitations and constraints of the query builder are mostly related to the limitations given by [algolia](https://www.algolia.com/doc/api-reference/api-parameters/filters/#boolean-operators)
   
 - To use `_tags` for filtering just add the a custom field with name `_tags` and pass it the value
   ```json
