@@ -2,7 +2,7 @@ import { expect } from 'chai';
 
 import AlgoliaQueryParser from '../src/query-parser';
 
-describe.only('query parser', () => {
+describe('query parser', () => {
   it('eq', () => {
     const queryParser = new AlgoliaQueryParser({
       field: { eq: 3 },
@@ -10,6 +10,15 @@ describe.only('query parser', () => {
 
     const query = queryParser.exec();
     expect(query).to.eq('field = 3');
+  });
+
+  it('ne', () => {
+    const queryParser = new AlgoliaQueryParser({
+      field: { ne: 3 },
+    });
+
+    const query = queryParser.exec();
+    expect(query).to.eq('field != 3');
   });
 
   it('gt', () => {
@@ -46,6 +55,15 @@ describe.only('query parser', () => {
 
     const query = queryParser.exec();
     expect(query).to.eq('field <= 3');
+  });
+
+  it('_tags', () => {
+    const queryParser = new AlgoliaQueryParser({
+      _tags: '123',
+    });
+
+    const query = queryParser.exec();
+    expect(query).to.eq('_tags : "123"');
   });
 
   it('between', () => {
