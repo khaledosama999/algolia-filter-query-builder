@@ -1,3 +1,9 @@
+#### 1.1.1 (2021-03-29)
+
+##### Build System / Dependencies
+
+* **uglify:**  uglify the files to have a smaller bundle size ([863c5102](https://github.com/khaledosama999/algolia-filter-query-builder/commit/863c5102481213ef8e47df5887f8b3dd33409ea9))
+
 ### 1.1.0 (2021-03-28)
 
 ##### Documentation Changes
