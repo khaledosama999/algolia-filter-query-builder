@@ -23,7 +23,8 @@
   "types": "./build/index.d.ts",
   "source": "./src/index.ts",
   "scripts": {
-    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
+    "test": "cross-env ./node_modules/.bin/mocha -r ts-node/register tests/**/*.spec.ts",
+    "depcheck": "npm-check --skip-unused",
     "build": "rollup -c",
     "git-cz": "./node_modules/.bin/git-cz",
     "husky": "husky init",
@@ -41,33 +42,39 @@
       "name": "Khaled osama <khaledosama999>",
       "email": "khaledosama52@gmail.com",
       "url": "https://github.com/khaledosama999"
+    },
+    {
+      "name": "Milad E. Fahmy <miladezzat>",
+      "email": "khaledosama52@gmail.com",
+      "url": "https://github.com/miladezzat"
     }
   ],
   "license": "ISC",
   "devDependencies": {
-    "@rollup/plugin-typescript": "^8.2.0",
-    "@types/chai": "^4.2.15",
-    "@types/mocha": "^8.2.1",
-    "@typescript-eslint/eslint-plugin": "^4.15.2",
-    "@typescript-eslint/parser": "^4.15.2",
-    "chai": "^4.3.0",
-    "commitizen": "^4.2.3",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/chai": "^4.2.19",
+    "@types/mocha": "^8.2.2",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "chai": "^4.3.4",
+    "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.20.0",
+    "eslint": "^7.29.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.23.4",
     "generate-changelog": "^1.8.0",
-    "husky": "^5.1.1",
-    "mocha": "^8.3.0",
+    "husky": "^6.0.0",
+    "mocha": "^9.0.1",
+    "npm-check": "^5.9.2",
     "pinst": "^2.1.6",
-    "rollup": "^2.41.0",
+    "rollup": "^2.52.2",
     "rollup-plugin-uglify": "^6.0.4",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.1.5"
+    "typescript": "^4.3.4"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && npm run lint",
+      "pre-commit": "npm depcheck && npm test && npm run lint",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
@@ -75,5 +82,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "ts-node": "^10.0.0"
   }
 }
