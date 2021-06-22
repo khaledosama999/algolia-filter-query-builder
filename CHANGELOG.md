@@ -1,3 +1,19 @@
+#### 1.1.2 (2021-06-22)
+
+##### Chores
+
+*  update deps ([106733c8](https://github.com/khaledosama999/algolia-filter-query-builder/commit/106733c8dcb08d4566ff30459c4d0b9591e893f4))
+
+##### Bug Fixes
+
+* **file name:**  change file rollup.config.js to rollup.config.ts ([edea56d2](https://github.com/khaledosama999/algolia-filter-query-builder/commit/edea56d22aef16d5e503ac2b1ff6788d0d3819c9))
+
+#### 1.1.1 (2021-03-29)
+
+##### Build System / Dependencies
+
+* **uglify:**  uglify the files to have a smaller bundle size ([863c5102](https://github.com/khaledosama999/algolia-filter-query-builder/commit/863c5102481213ef8e47df5887f8b3dd33409ea9))
+
 ### 1.1.0 (2021-03-28)
 
 ##### Documentation Changes
