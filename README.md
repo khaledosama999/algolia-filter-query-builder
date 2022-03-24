@@ -85,7 +85,7 @@ const results = algoliaIndex.search("str",{
     ```json
     { x: { between: [1,2] } }
     ```
-****   - #### in 
+   - #### in 
     Checks if a field is in the array of given values (can contain strings or number)
     ```json
     { x: { in: [1,2,3] } }
