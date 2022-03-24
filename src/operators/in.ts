@@ -1,7 +1,7 @@
 /* eslint-disable constructor-super */
 /* eslint-disable class-methods-use-this */
 import { Operator } from './abstract';
-import AndOperator from './and';
+import OrOperator from './or';
 
 class InOperator extends Operator {
   constructor(private value: Operator[]) {
@@ -9,9 +9,9 @@ class InOperator extends Operator {
   }
 
   public exec() {
-    // In operator resembles and and exactly
-    const andOperator = new AndOperator(this.value);
-    return andOperator.exec();
+    // In operator resembles or exactly
+    const orOperator = new OrOperator(this.value);
+    return orOperator.exec();
   }
 
   public validate() {

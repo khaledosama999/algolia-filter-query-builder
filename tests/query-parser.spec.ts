@@ -114,6 +114,6 @@ describe('query parser', () => {
     });
 
     const query = queryParser.exec();
-    expect(query).to.eq('field = 1 AND field = 2');
+    expect(query).to.eq('( field = 1 OR field = 2 )');
   });
 });

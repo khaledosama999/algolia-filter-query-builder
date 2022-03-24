@@ -1,3 +1,9 @@
+#### 1.1.2 (2022-03-24)
+
+##### Bug Fixes
+
+* **in.js:**  fix IN operator use OR instead of AND ([0b782ef6](https://github.com/khaledosama999/algolia-filter-query-builder/commit/0b782ef6e17aa86e3fe80350c47e12dec87c71cd))
+
 #### 1.1.1 (2021-03-29)
 
 ##### Build System / Dependencies
