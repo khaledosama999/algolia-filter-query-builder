@@ -9,7 +9,7 @@ class InOperator extends Operator {
   }
 
   public exec() {
-    // In operator resembles and and exactly
+    // In operator resembles or exactly
     const orOperator = new OrOperator(this.value);
     return orOperator.exec();
   }
